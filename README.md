@@ -171,6 +171,6 @@ Thank you Microverse and my friend who always explain me for preparing this proj
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Kaghenimbale/school_library/blob/main/LICENSE) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
