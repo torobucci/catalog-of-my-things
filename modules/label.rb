@@ -1,6 +1,6 @@
 require_relative '../item'
 
-class Label < Item
+class Label
   attr_accessor :title, :author
 
   def initialize(title, color, id: nil)
@@ -9,7 +9,7 @@ class Label < Item
     @color = color
     @items = []
   end
-  
+
   def add_item(item)
     @items << item
     item.label = self
