@@ -13,4 +13,8 @@ class MusicAlbum < Item
         @genre = genre
         genre.items << self unless genre.items.include?(self)
     end
+
+    def can_be_archived?
+        super && @on_spotify
+    end
 end
