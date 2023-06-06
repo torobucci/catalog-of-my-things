@@ -15,7 +15,7 @@ class Game < Item
     super() && last_played_at < two_years_ago
   end
 
-  def to_json
+  def to_json(*_args)
     {
       'id' => @id,
       'published_date' => @published_date,
@@ -31,5 +31,4 @@ class Game < Item
     game.id = data['id'].to_i
     game
   end
-
 end

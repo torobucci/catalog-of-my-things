@@ -12,5 +12,4 @@ module SaveData
       file.write(json_data)
     end
   end
-
 end

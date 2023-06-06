@@ -12,5 +12,4 @@ module LoadData
     json_data = File.read('./JSON/authors.json')
     @authors = JSON.parse(json_data).map { |author_data| Author.from_json(author_data) }
   end
-
 end

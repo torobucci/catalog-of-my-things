@@ -18,7 +18,10 @@ class App
       puts 'No games available'
     else
       @games.each do |game|
-        puts "ID:#{game.id} Published_date:#{game.published_date} Multiplayer:#{game.multiplayer} Last_played:#{game.last_played_at}"
+        puts "ID:#{game.id}
+              Published_date:#{game.published_date}
+              Multiplayer:#{game.multiplayer}
+              Last_played:#{game.last_played_at}"
       end
     end
   end
