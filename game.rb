@@ -14,4 +14,22 @@ class Game < Item
     two_years_ago = Time.new(current_date.year - 2, current_date.month, current_date.day)
     super() && last_played_at < two_years_ago
   end
+
+  def to_json
+    {
+      'id' => @id,
+      'published_date' => @published_date,
+      'archived' => @archived,
+      'multiplayer' => @multiplayer,
+      'last_played_at' => @last_played_at
+    }.to_json
+  end
+
+  def self.from_json(json)
+    data = JSON.parse(json)
+    game = new(data['published_date'], data['archived'], data['multiplayer'], data['last_played_at'])
+    game.id = data['id'].to_i
+    game
+  end
+
 end
