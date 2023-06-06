@@ -8,4 +8,9 @@ class MusicAlbum < Item
         @on_spotify = on_spotify
         @name = name
     end
+
+    def add_genre=(genre)
+        @genre = genre
+        genre.items << self unless genre.items.include?(self)
+    end
 end
