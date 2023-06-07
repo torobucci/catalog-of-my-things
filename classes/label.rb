@@ -3,8 +3,8 @@ require_relative '../item'
 class Label
   attr_accessor :title
 
-  def initialize(title, color, id: nil)
-    @id = id.nil? ? Random.rand(1..1000) : id
+  def initialize(title, color)
+    @id = rand(1..1000)
     @title = title
     @color = color
     @items = []
