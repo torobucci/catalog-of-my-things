@@ -14,6 +14,3 @@ class Book < Item
     super || @cover_state == "bad"
   end
 end
-
-book = Book.new("Publisher", "good", "2021-01-01", false)
-p book.can_be_archived?
