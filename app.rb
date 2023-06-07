@@ -1,6 +1,6 @@
 require_relative './author'
 require_relative './game'
-require_relative './Modules/userInput'
+require_relative './Modules/user_input'
 class App
   include UserInput
   def initialize
