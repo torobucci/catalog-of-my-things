@@ -1,8 +1,13 @@
 require_relative './author'
 require_relative './game'
 require_relative './Modules/user_input'
+require_relative './Modules/save_data'
+require_relative './Modules/load_data'
+require 'json'
 class App
   include UserInput
+  include SaveData
+  include LoadData
   def initialize
     @games = []
     @authors = []
@@ -13,7 +18,10 @@ class App
       puts 'No games available'
     else
       @games.each do |game|
-        puts "ID: #{game.id} Published date: #{game.published_date}"
+        puts "ID:#{game.id}
+              Published_date:#{game.published_date}
+              Multiplayer:#{game.multiplayer}
+              Last_played:#{game.last_played_at}"
       end
     end
   end
@@ -40,6 +48,8 @@ class App
   end
 
   def exit_app
+    save_games
+    save_authors
     puts 'Thank you for using this app!'
     exit
   end
