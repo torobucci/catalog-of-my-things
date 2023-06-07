@@ -1,6 +1,6 @@
 require './item'
 
-class Music_album < Item
+class MusicAlbum < Item
   attr_accessor :on_spotify, :name
 
   def initialize(name, on_spotify, publish_date, archived)
