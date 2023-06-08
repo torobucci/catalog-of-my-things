@@ -5,6 +5,8 @@ require_relative './classes/label'
 require_relative './Modules/user_input'
 require_relative './Modules/save_data'
 require_relative './Modules/load_data'
+require_relative './music/genre'
+require_relative './music/music_album_spec'
 require 'json'
 class App
   include UserInput
@@ -15,6 +17,8 @@ class App
     @authors = []
     @books = []
     @labels = []
+    @genres = []
+    @albums = []
   end
 
   def list_all_games
