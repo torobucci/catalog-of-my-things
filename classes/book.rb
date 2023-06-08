@@ -13,4 +13,21 @@ class Book < Item
   def can_be_archived?
     super || @cover_state == 'bad'
   end
+
+  def to_json(*_args)
+    {
+      'id' => @id,
+      'publisher' => @publisher,
+      'cover_state' => @cover_state,
+      'published_date' => @published_date,
+      'archived' => @archived
+    }.to_json
+  end
+
+  def self.from_json(json)
+    data = JSON.parse(json)
+    book = new(data['publisher'], data['cover_state'], data['published_date'], data['archived'])
+    book.id = data['id'].to_i
+    book
+  end
 end

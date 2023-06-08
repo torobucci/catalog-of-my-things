@@ -12,4 +12,18 @@ module SaveData
       file.write(json_data)
     end
   end
+
+  def save_books
+    File.open('./JSON/books.json', 'w') do |file|
+      json_data = JSON.pretty_generate(@books.map(&:to_json))
+      file.write(json_data)
+    end
+  end
+
+  def save_labels
+    File.open('./JSON/labels.json', 'w') do |file|
+      json_data = JSON.pretty_generate(@labels.map(&:to_json))
+      file.write(json_data)
+    end
+  end
 end
