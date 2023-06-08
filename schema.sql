@@ -16,7 +16,7 @@ CREATE TABLE author(
     last_name varchar
 )
 
-CREATE TABLE books (
+CREATE TABLE book (
   id SERIAL PRIMARY KEY,
   genre int REFERENCES genre(id),
   author int REFERENCES author(id),
@@ -28,7 +28,7 @@ CREATE TABLE books (
   archived BOOLEAN
 );
 
-CREATE TABLE labels (
+CREATE TABLE label (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
   color VARCHAR(255)
