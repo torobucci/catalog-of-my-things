@@ -1,5 +1,4 @@
 require '../../item'
-
 require_relative 'genre'
 
 class MusicAlbum < Item
