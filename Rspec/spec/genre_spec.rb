@@ -1,7 +1,8 @@
-require './music/genre'
-require './music/music_album'
+require_relative '../../music/genre'
+require_relative '../../music/music_album'
+require 'rspec'
 
-describe 'genre' do
+describe Genre do
   before(:each) do
     @genre = Genre.new('Pop')
   end
@@ -11,9 +12,9 @@ describe 'genre' do
       expect(@genre).to be_an_instance_of(Genre)
     end
     it 'should return the length of items' do
-      album = MusicAlbum.new(on_spotify: true, can_be_archived: true)
+      album = MusicAlbum.new('Ahmad', true, 2022, false)
       @genre.add_item(album)
-      expect(@genre.items.length).to eql (1)
+      expect(@genre.items.length).to eql 1
     end
   end
 end

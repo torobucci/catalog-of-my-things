@@ -1,23 +1,24 @@
-# File: music_album_spec.rb
+require_relative '../../music/music_album'
+require 'rspec'
 
-require_relative '../music_album' # Assuming the MusicAlbum class is defined in music_album.rb
+describe MusicAlbum do
+  let(:album) { MusicAlbum.new('James', true, 2022, false) }
 
-RSpec.describe MusicAlbum do
-  # Test case for the initialization of a MusicAlbum instance
-  describe '#initialize' do
-    it 'creates a new MusicAlbum instance with the given attributes' do
-      album = MusicAlbum.new('Thriller', 'Michael Jackson', 1982)
-      expect(album.title).to eq('Thriller')
-      expect(album.artist).to eq('Michael Jackson')
-      expect(album.year).to eq(1982)
+  context 'testing MusicAlbum class' do
+    it 'create the instance of MusicAlbum class' do
+      expect(album).to be_an_instance_of(MusicAlbum)
     end
-  end
 
-  # Test case for the #play method
-  describe '#play' do
-    it 'returns a string indicating that the album is being played' do
-      album = MusicAlbum.new('Thriller', 'Michael Jackson', 1982)
-      expect(album.play).to eq('Playing Thriller by Michael Jackson')
+    it 'should return correct name' do
+      expect(album.name).to eql('James')
+    end
+
+    it 'should return correct spotify status' do
+      expect(album.on_spotify).to eql(true)
+    end
+
+    it 'should return the correct date for publish date' do
+      expect(album.published_date).to eql(2022)
     end
   end
 end
