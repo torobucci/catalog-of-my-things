@@ -33,3 +33,17 @@ CREATE TABLE label (
   title VARCHAR(255),
   color VARCHAR(255)
 );
+
+CREATE TABLE music_album_data (
+    id INT PRIMARY KEY,
+    published_date DATE,
+    archived BOOLEAN,
+    on_spotify BOOLEAN,
+    name VARCHAR(255),
+    release_date DATE
+);
+
+CREATE TABLE genre (
+    id INT PRIMARY KEY,
+    name VARCHAR(255)
+);
