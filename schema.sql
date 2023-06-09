@@ -1,41 +1,49 @@
-CREATE TABLE game(
+CREATE TABLE game (
     id SERIAL PRIMARY KEY,
-    genre int REFERENCES genre(id),
-    author int REFERENCES author(id),
-    source int REFERENCES source(id),
-    label int REFERENCES label(id),
-    publish_date date,
-    archived boolean,
-    multiplayer boolean,
-    last_played_at date
-)
+    genre INT,
+    author INT,
+    source INT,
+    label INT,
+    publish_date DATE,
+    archived BOOLEAN,
+    multiplayer BOOLEAN,
+    last_played_at DATE,
+    FOREIGN KEY (genre) REFERENCES genre(id),
+    FOREIGN KEY (author) REFERENCES author(id),
+    FOREIGN KEY (source) REFERENCES source(id),
+    FOREIGN KEY (label) REFERENCES label(id)
+);
 
-CREATE TABLE author(
+CREATE TABLE author (
     id SERIAL PRIMARY KEY,
-    first_name varchar,
-    last_name varchar
-)
+    first_name VARCHAR(255),
+    last_name VARCHAR(255)
+);
 
 CREATE TABLE book (
-  id SERIAL PRIMARY KEY,
-  genre int REFERENCES genre(id),
-  author int REFERENCES author(id),
-  source int REFERENCES source(id),
-  label int REFERENCES label(id),
-  publisher VARCHAR(255),
-  cover_state VARCHAR(255),
-  published_date DATE,
-  archived BOOLEAN
+    id SERIAL PRIMARY KEY,
+    genre INT,
+    author INT,
+    source INT,
+    label INT,
+    publisher VARCHAR(255),
+    cover_state VARCHAR(255),
+    published_date DATE,
+    archived BOOLEAN,
+    FOREIGN KEY (genre) REFERENCES genre(id),
+    FOREIGN KEY (author) REFERENCES author(id),
+    FOREIGN KEY (source) REFERENCES source(id),
+    FOREIGN KEY (label) REFERENCES label(id)
 );
 
 CREATE TABLE label (
-  id SERIAL PRIMARY KEY,
-  title VARCHAR(255),
-  color VARCHAR(255)
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255),
+    color VARCHAR(255)
 );
 
 CREATE TABLE music_album_data (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     published_date DATE,
     archived BOOLEAN,
     on_spotify BOOLEAN,
@@ -44,6 +52,6 @@ CREATE TABLE music_album_data (
 );
 
 CREATE TABLE genre (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255)
 );
