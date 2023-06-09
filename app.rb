@@ -88,7 +88,7 @@ class App
     else
       @genres.each do |genre|
         puts "ID: #{genre.id}"
-        puts "Published Date: #{genre.published_date}"
+        puts "Name: #{genre.name}"
         puts '-----------------------'
       end
     end

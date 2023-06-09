@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -11,7 +12,6 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -22,26 +22,27 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Ruby Catalog of things Capstone project] <a name="about-project"></a>
+# 📖 Ruby Catalog of things Capstone project <a name="about-project"></a>
 
-**[Ruby Catalog of things Capstone project]** a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram.
+**Ruby Catalog of things Capstone project** is a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<summary>Ruby</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+     <li><a href="https://www.postgresql.org/">PostgreSql</a></li>
   </ul>
-</details>
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
--use Oriented object programming
--Utilizes classes
--TDD driven
+- Functional UI
+- Object Oriented Programming
+- Test Driven Development
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -63,13 +64,10 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
-  sudo apt install ruby-full
-```
- -->
+<ul>
+    <li><a href="https://code.visualstudio.com/">Code editor e.g VS Code</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+  </ul>
 
 ### Setup
 
@@ -79,27 +77,20 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone 
+  git clone  https://github.com/torobucci/Breadcrumbscatalog-of-my-things.git
 ```
 
 ### Install
 
 Install this project with:
 
- -bundle install
-
-Example command:
-
 ```sh
-  cd school_library
   bundle install
 ```
 
 ### Usage
 
 To run the project, execute the following command:
-  
--rspec spec
 
 ```sh
   ruby main.rb
@@ -107,16 +98,11 @@ To run the project, execute the following command:
 
 ### Run tests
 
-To run tests, run the following command:
+To run tests, run the following sample command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec ./file_spec.rb
 ```
-
-### Deployment
-
-This project has not been deployed yet.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -125,10 +111,19 @@ This project has not been deployed yet.
 
 
 👤 **Reem Muhammad**
-
 - GitHub: [@githubhandle](https://github.com/ReemMohamedAbdelfatah)
 - Twitter: [@twitterhandle](https://twitter.com/ReemMoh67016126)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/reemmuhammad/)
+
+👤 **Kevin Toro**
+- GitHub: [@torobucii](https://github.com/torobucci)
+- Twitter: [@torobucii](https://twitter.com/@torobucii)
+- LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
+
+👤 **Henry Omondi**
+- GitHub: [@githubhandle](https://github.com/Odongo006)
+- Twitter: [@twitterhandle](twitter.com/HenryOdongo007)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/henry-odongo/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,7 +131,9 @@ This project has not been deployed yet.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add uder interface]**
+- Display add game in UI
+- Display add genre in UI
+- Display add label in UI
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -147,7 +144,7 @@ This project has not been deployed yet.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Kaghenimbale/school_library/issues).
+Feel free to check the [issues page](https://github.com/torobucci/catalog-of-my-things/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
