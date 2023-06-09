@@ -2,11 +2,11 @@ require_relative './author'
 require_relative './game'
 require_relative './classes/book'
 require_relative './classes/label'
+require_relative './music/genre'
+require_relative './music/music_album'
 require_relative './Modules/user_input'
 require_relative './Modules/save_data'
 require_relative './Modules/load_data'
-require_relative './music/genre'
-require_relative './music/music_album_spec'
 require 'json'
 class App
   include UserInput
@@ -69,6 +69,31 @@ class App
     end
   end
 
+  def list_all_music_albums
+    if @music_album.nil? || @music_album.empty?
+      puts 'No music albums available'
+    else
+      @music_album.each do |music_album|
+        puts "ID: #{music_album.id}"
+        puts "Release Date: #{music_album.published_date}"
+        puts "Album Name: #{music_album.name}"
+        puts "-----------------------"
+      end
+    end
+  end
+
+  def list_all_genres
+    if @genres.empty?
+      puts 'No genres available'
+    else
+      @genres.each do |genre|
+        puts "ID: #{genre.id}"
+        puts "Published Date: #{genre.published_date}"
+        puts "-----------------------"
+      end
+    end
+  end  
+
   def add_game
     published_date, archived, multiplayer, last_played_at = user_input(['Enter published date eg "2020-02-05"',
                                                                         'Enter archirved [True/False]',
@@ -100,11 +125,31 @@ class App
     puts 'Label added successfully'
   end
 
+  def add_music_album
+    album_name, on_spotify, release_date, published_date, archived = user_input(['Enter Album_Name',
+                                                                               'Enter On_Spotify [True/False]',
+                                                                               'Enter Release_date eg "2020-02-05"',
+                                                                               'Enter Published_date eg "2020-02-05"',
+                                                                               'Enter Archived [True/False]'])
+  
+    music_album = MusicAlbum.new(album_name, on_spotify, release_date, published_date, archived)
+  
+    # Check if @music_album is nil and initialize it as an empty array if needed
+    @music_album ||= []
+  
+    @music_album << music_album
+    puts 'Music Album added successfully'
+  end
+  
+
+
   def exit_app
     save_games
     save_authors
     save_books
     save_labels
+    save_genres
+    save_music_album
     puts 'Thank you for using this app!'
     exit
   end

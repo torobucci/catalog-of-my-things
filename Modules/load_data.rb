@@ -26,4 +26,19 @@ module LoadData
     json_data = File.read('./JSON/labels.json')
     @labels = JSON.parse(json_data).map { |label_data| Label.from_json(label_data) }
   end
+
+  def load_music_album
+    return unless File.exist?('./JSON/music_album.json') && !File.empty?('./JSON/music_album.json')
+  
+    json_data = File.read('./JSON/music_album.json')
+    music_album_data = JSON.parse(json_data)
+    @music_album = music_album_data.map { |music_album_data| MusicAlbum.from_json(music_album_data) }
+  end  
+
+  def load_genres
+    return unless File.exist?('./JSON/genre.json') && !File.empty?('./JSON/genre.json')
+  
+    json_data = File.read('./JSON/genre.json')
+    @genres = JSON.parse(json_data).map { |genre_data| Genre.from_json(genre_data) }
+  end  
 end
