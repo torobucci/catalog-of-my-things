@@ -77,7 +77,7 @@ class App
         puts "ID: #{music_album.id}"
         puts "Release Date: #{music_album.published_date}"
         puts "Album Name: #{music_album.name}"
-        puts "-----------------------"
+        puts '-----------------------'
       end
     end
   end
@@ -89,10 +89,10 @@ class App
       @genres.each do |genre|
         puts "ID: #{genre.id}"
         puts "Published Date: #{genre.published_date}"
-        puts "-----------------------"
+        puts '-----------------------'
       end
     end
-  end  
+  end
 
   def add_game
     published_date, archived, multiplayer, last_played_at = user_input(['Enter published date eg "2020-02-05"',
@@ -127,21 +127,19 @@ class App
 
   def add_music_album
     album_name, on_spotify, release_date, published_date, archived = user_input(['Enter Album_Name',
-                                                                               'Enter On_Spotify [True/False]',
-                                                                               'Enter Release_date eg "2020-02-05"',
-                                                                               'Enter Published_date eg "2020-02-05"',
-                                                                               'Enter Archived [True/False]'])
-  
+                                                                                 'Enter On_Spotify [True/False]',
+                                                                                 'Enter Release_date eg "2020-02-05"',
+                                                                                 'Enter Published_date eg "2020-02-05"',
+                                                                                 'Enter Archived [True/False]'])
+
     music_album = MusicAlbum.new(album_name, on_spotify, release_date, published_date, archived)
-  
+
     # Check if @music_album is nil and initialize it as an empty array if needed
     @music_album ||= []
-  
+
     @music_album << music_album
     puts 'Music Album added successfully'
   end
-  
-
 
   def exit_app
     save_games

@@ -10,7 +10,7 @@ class MusicAlbum < Item
     @name = name
     @release_date = release_date
   end
-  
+
   def can_be_archived?
     super && @on_spotify
   end
