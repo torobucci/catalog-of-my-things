@@ -6,6 +6,8 @@ def main
   app.load_authors
   app.load_books
   app.load_labels
+  app.load_music_album
+  app.load_genres
   puts 'Welcome to catalog-of-my-things App!'
   options(app)
 end
