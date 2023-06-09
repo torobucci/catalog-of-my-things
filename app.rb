@@ -95,23 +95,21 @@ class App
   end
 
   def add_game
-    published_date, archived, multiplayer, last_played_at = user_input(['Enter published date eg "2020-02-05"',
-                                                                        'Enter archirved [True/False]',
-                                                                        'Enter multiplayer [True/False]',
-                                                                        'Enter last played date eg "2020-02-05"'])
+    published_date, multiplayer, last_played_at = user_input(['Enter published date eg "2020-02-05"',
+                                                              'Enter multiplayer [True/False]',
+                                                              'Enter last played date eg "2020-02-05"'])
 
-    game = Game.new(published_date, archived, multiplayer, last_played_at)
+    game = Game.new(published_date, multiplayer, last_played_at)
     @games << game
     puts 'Game added successfully'
   end
 
   def add_book
-    publisher, cover_state, published_date, archived = user_input(['Enter publisher',
-                                                                   'Enter cover state eg [good/bad]',
-                                                                   'Enter published date eg "2020-02-05"',
-                                                                   'Enter archirved [True/False]'])
+    publisher, cover_state, published_date = user_input(['Enter publisher',
+                                                         'Enter cover state eg [good/bad]',
+                                                         'Enter published date eg "2020-02-05"'])
 
-    book = Book.new(publisher, cover_state, published_date, archived)
+    book = Book.new(publisher, cover_state, published_date)
     @books << book
     puts 'Book added successfully'
   end
@@ -125,14 +123,30 @@ class App
     puts 'Label added successfully'
   end
 
-  def add_music_album
-    album_name, on_spotify, release_date, published_date, archived = user_input(['Enter Album_Name',
-                                                                                 'Enter On_Spotify [True/False]',
-                                                                                 'Enter Release_date eg "2020-02-05"',
-                                                                                 'Enter Published_date eg "2020-02-05"',
-                                                                                 'Enter Archived [True/False]'])
+  def add_author
+    first_name, last_name = user_input(['Enter first name',
+                                        'Enter Last name'])
 
-    music_album = MusicAlbum.new(album_name, on_spotify, release_date, published_date, archived)
+    author = Author.new(first_name, last_name)
+    @authors << author
+    puts 'Author added successfully'
+  end
+
+  def add_genre
+    name = user_input(['Enter name'])
+
+    genre = Genre.new(name)
+    @genres << genre
+    puts 'Genre added successfully'
+  end
+
+  def add_music_album
+    album_name, on_spotify, release_date, published_date = user_input(['Enter Album_Name',
+                                                                       'Enter On_Spotify [True/False]',
+                                                                       'Enter Release_date eg "2020-02-05"',
+                                                                       'Enter Published_date eg "2020-02-05"'])
+
+    music_album = MusicAlbum.new(album_name, on_spotify, release_date, published_date)
 
     # Check if @music_album is nil and initialize it as an empty array if needed
     @music_album ||= []

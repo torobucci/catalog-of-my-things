@@ -4,7 +4,9 @@ def options(app)
     3 => :add_book, 4 => :list_all_music_albums,
     5 => :list_all_genres, 6 => :add_music_album,
     7 => :list_all_games, 8 => :list_all_authors,
-    9 => :add_game, 10 => :exit_app
+    9 => :add_game, 10 => :add_label,
+    11 => :add_author, 12 => :add_genre,
+    13 => :exit_app
   }
 
   loop do

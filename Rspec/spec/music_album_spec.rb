@@ -2,7 +2,7 @@ require_relative '../../music/music_album'
 require 'rspec'
 
 describe MusicAlbum do
-  let(:album) { MusicAlbum.new('James', true, 2022, false) }
+  let(:album) { MusicAlbum.new('James', true, '2020-10-10', '2021-03-05') }
 
   context 'testing MusicAlbum class' do
     it 'create the instance of MusicAlbum class' do
@@ -18,7 +18,11 @@ describe MusicAlbum do
     end
 
     it 'should return the correct date for publish date' do
-      expect(album.published_date).to eql(2022)
+      expect(album.published_date).to eql('2021-03-05')
+    end
+
+    it 'should return the correct date for released date' do
+      expect(album.release_date).to eql('2020-10-10')
     end
   end
 end
