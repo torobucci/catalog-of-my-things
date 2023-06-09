@@ -2,10 +2,10 @@ require 'time'
 class Item
   attr_accessor :published_date, :archived, :genre, :author, :source, :label, :id
 
-  def initialize(published_date, archived)
+  def initialize(published_date)
     @id = rand(1..1000)
     @published_date = published_date
-    @archived = archived
+    @archived = false
   end
 
   def can_be_archived?

@@ -3,8 +3,8 @@ require_relative '../item'
 class Book < Item
   attr_accessor :publisher, :cover_state
 
-  def initialize(publisher, cover_state, published_date, archived)
-    super(published_date, archived)
+  def initialize(publisher, cover_state, published_date)
+    super(published_date)
     @id = rand(1..1000)
     @publisher = publisher
     @cover_state = cover_state
@@ -26,7 +26,7 @@ class Book < Item
 
   def self.from_json(json)
     data = JSON.parse(json)
-    book = new(data['publisher'], data['cover_state'], data['published_date'], data['archived'])
+    book = new(data['publisher'], data['cover_state'], data['published_date'])
     book.id = data['id'].to_i
     book
   end
