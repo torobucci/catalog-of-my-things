@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -29,11 +30,12 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<summary>Ruby</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+     <li><a href="https://www.postgresql.org/">PostgreSql</a></li>
   </ul>
-</details>
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Features -->
 
@@ -101,6 +103,7 @@ To run tests, run the following sample command:
 ```sh
   rspec ./file_spec.rb
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
@@ -108,7 +111,6 @@ To run tests, run the following sample command:
 
 
 👤 **Reem Muhammad**
-
 - GitHub: [@githubhandle](https://github.com/ReemMohamedAbdelfatah)
 - Twitter: [@twitterhandle](https://twitter.com/ReemMoh67016126)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/reemmuhammad/)
@@ -117,14 +119,13 @@ To run tests, run the following sample command:
 - GitHub: [@torobucii](https://github.com/torobucci)
 - Twitter: [@torobucii](https://twitter.com/@torobucii)
 - LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 👤 **Henry Omondi**
-
 - GitHub: [@githubhandle](https://github.com/Odongo006)
 - Twitter: [@twitterhandle](twitter.com/HenryOdongo007)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/henry-odongo/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
