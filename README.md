@@ -50,7 +50,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-This project has not been deployed yet
+Here is [video](https://drive.google.com/file/d/1o5id4cgCCm2PTbAzeWhTUiFJpvDa5CbT/view?usp=sharing) presentation of our project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
